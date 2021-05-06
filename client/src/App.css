@@ -1,22 +1,20 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.app, p, h1, h2, h3, a, Link {
   text-align: center;
+  font-family: Pangolin;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header, .result, .savedBooks, form {
+  padding: 10px 10px;
+  Border: 5px solid black;
+  margin: 10px 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#input {
+  width: 100%;
 }
 
-.App-intro {
-  font-size: large;
-}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

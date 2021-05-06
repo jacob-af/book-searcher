@@ -18,10 +18,17 @@ const Saved = () => {
   }, []);
 
   return (
-    <div>
-      {savedBooks.map(book => (
-        <SavedBook book={book} deleteBook={deleteBook} key={book.id} />
-      ))}
+    <div className="result">
+      <p className="text-left ml-3">Saved Books</p>
+      {savedBooks[0] ? (
+        savedBooks.map(book => (
+          <SavedBook book={book} deleteBook={deleteBook} key={book.id} />
+        ))
+      ) : (
+        <div className="result">
+          <p>No saved Books</p>
+        </div>
+      )}
     </div>
   );
 };

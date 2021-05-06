@@ -6,7 +6,7 @@ const bookSchema = new Schema({
   authors: [{ type: String, required: true }],
   description: String,
   thumbnail: String,
-  link: String,
+  previewink: String,
   date: { type: Date, default: Date.now }
 });
 

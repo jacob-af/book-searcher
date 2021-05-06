@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
@@ -9,7 +10,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="app">
         <Nav />
         <div className="container">
           <Header />

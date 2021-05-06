@@ -3,10 +3,15 @@ import Result from "./Result";
 
 const SearchResults = ({ results }) => {
   return (
-    <div>
-      {results.map(result => (
-        <Result result={result} key={result.volumeInfo.previewLink} />
-      ))}
+    <div className="result">
+      <p className="text-left ml-3">Results</p>
+      {results ? (
+        results.map(result => (
+          <Result result={result} key={result.volumeInfo.previewLink} />
+        ))
+      ) : (
+        <div className="result">start a search</div>
+      )}
     </div>
   );
 };

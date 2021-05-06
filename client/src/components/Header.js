@@ -2,8 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <h1>the best book searching evar</h1>
+    <div className="header">
+      <h1>(React) Google Book Search</h1>
+      <h5>Search for and Save Books of Interest</h5>
     </div>
   );
 };
