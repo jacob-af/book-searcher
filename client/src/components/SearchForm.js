@@ -20,7 +20,7 @@ const SearchForm = ({ setResults }) => {
     <form id="form" action="">
       <h5 className="text-left">Book Search</h5>
       <div>
-        <p className="text-left">books</p>
+        <p className="text-left">book</p>
         <input id="input" autoComplete="off" ref={inputRef} />
       </div>
       <div className="d-flex justify-content-end mt-3">
