@@ -10,7 +10,7 @@ const SearchResults = ({ results }) => {
           <Result result={result} key={result.volumeInfo.previewLink} />
         ))
       ) : (
-        <div className="result">start a search</div>
+        <div className="result">No Results to Display</div>
       )}
     </div>
   );

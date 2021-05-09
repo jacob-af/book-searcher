@@ -2,14 +2,15 @@ import React from "react";
 
 const SavedBook = ({
   deleteBook,
-  book: { title, authors, description, previewLink, thumbnail, _id }
+  book: { title, subtitle, authors, description, previewLink, thumbnail, _id }
 }) => {
   return (
     <div className="savedBooks p-4">
       <div className="row">
         <div className="col-10">
           <h2 className="text-left">{title}</h2>
-          <h5 className="text-left">
+          <h5 className="text-left">{subtitle}</h5>
+          <h4 className="text-left">
             {authors ? (
               authors.map(author => {
                 return <span key={author}>{author}</span>;
@@ -17,7 +18,7 @@ const SavedBook = ({
             ) : (
               <div>!</div>
             )}
-          </h5>
+          </h4>
         </div>
 
         <div className="col-2">
