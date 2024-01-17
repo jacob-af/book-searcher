@@ -3,23 +3,19 @@ import API from "../utils/API";
 
 const Result = ({
   result: {
-    volumeInfo: {
-      title,
-      authors,
-      description,
-      previewLink,
-      imageLinks: { thumbnail }
-    }
+    thumbnail,
+    volumeInfo: { title, subtitle, authors, description, previewLink }
   }
 }) => {
   const saveBook = event => {
     event.preventDefault();
     const data = {
       title,
+      subtitle,
       authors,
       description,
       previewLink,
-      thumbnail: thumbnail || "https://via.placeholder.com/128x129.png"
+      thumbnail
     };
     API.saveBook(data);
   };
@@ -28,19 +24,20 @@ const Result = ({
       <div className="row">
         <div className="col-10">
           <h2 className="text-left">{title}</h2>
-          <h5 className="text-left">
+          <h5 className="text-left">{subtitle}</h5>
+          <h4 className="text-left">
             {authors ? (
               authors.map(author => {
                 return <span key={author}>{author}</span>;
               })
             ) : (
-              <div>!</div>
+              <div></div>
             )}
-          </h5>
+          </h4>
         </div>
         <div className="col-2">
           <a
-            className="btn btn-outline-dark btn-sm pr-2"
+            className="btn btn-outline-dark btn-sm mr-2"
             href={previewLink}
             target="_blank"
             rel="noopener noreferrer"

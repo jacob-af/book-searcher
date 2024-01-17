@@ -3,7 +3,7 @@ import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 
 const Search = () => {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState();
 
   return (
     <div>

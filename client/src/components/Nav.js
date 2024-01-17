@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <Link class="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
           Google Book Search
         </Link>
 
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <Link class="nav-link " aria-current="page" to="/">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <Link className="nav-link " aria-current="page" to="/">
               Search
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/saved">
+          <li className="nav-item">
+            <Link className="nav-link" to="/saved">
               Saved
             </Link>
           </li>
